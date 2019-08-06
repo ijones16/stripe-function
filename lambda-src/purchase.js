@@ -68,7 +68,7 @@ exports.handler = async function(event) {
 
   const status =
     charge === null || charge.status !== 'succeeded' ? 'failed' : charge.status
-
+  console.log(charge)
   return {
     ...OK_RESPONSE,
     body: JSON.stringify({
